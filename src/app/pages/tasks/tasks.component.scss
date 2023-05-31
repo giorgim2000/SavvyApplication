@@ -1,0 +1,107 @@
+*{
+    font-family: 'MyFont' !important;
+}
+
+#title{
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    font-family: "myFont";
+}
+
+#headerDiv{
+    margin: 10px;
+}
+
+.titleDiv{
+    border-bottom: 1px solid white;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+#mainDiv{
+    width: 100%;
+}
+
+.notFoundDiv{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.tabDiv{
+    display: block;
+    background-color: #ffffff;
+    transition: background-color 0.2s ease-in-out;
+    border-top: rgb(156, 153, 153) 1px solid;
+    border-bottom: rgb(156, 153, 153) 1px solid;
+    cursor: pointer;
+    margin: 0px 10px;
+    border-radius: 10px;
+    cursor: move;
+}
+
+.tabDiv:hover{
+    background-color: #dfe0e4;
+    border-top: black 2px solid;
+    border-bottom: black 2px solid;
+}
+
+p{
+    margin: 4px;
+    color: black;
+}
+
+#nameP{
+    font-weight: bold;
+    font-size: 1.15rem;
+}
+
+#adressP{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.otherInfoDiv{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.otherInfoDiv > *{
+    margin: 4px;
+}
+
+.otherInfoDiv{
+    p{
+        font-size: 0.75rem;
+    }
+}
+
+.otherInfoP{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+input{
+    width: 350px;
+    height: 50px;
+}
+
+img{
+    height: 40px;
+}
+
+@media only screen and (min-width: 430px){
+    #title{
+        font-size: 32px;
+    }
+    
+    .tabDiv{
+        margin: 5px 10px;
+    }
+
+    input{
+        height: 60px;
+    }
+}

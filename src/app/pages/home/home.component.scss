@@ -1,0 +1,87 @@
+// .logos-container {
+//   margin: 20px 0 40px 0;
+//   text-align: center;
+//   svg {
+//     display: inline-block;
+//   }
+// }
+
+// .devextreme-logo {
+//   width: 200px;
+//   height: 34px;
+//   margin-bottom: 13px;
+// }
+
+// .angular-logo {
+//   width: 220px;
+//   height: 62px;
+// }
+
+// .plus {
+//   margin: 15px 10px;
+//   width: 22px;
+//   height: 22px;
+// }
+
+// :host-context(.screen-x-small) .logos-container {
+//   svg {
+//     width: 100%;
+//     display: block;
+//     &.plus {
+//       margin: 0;
+//     }
+//   }
+// }
+
+@import "../../layouts/side-nav-outer-toolbar/side-nav-outer-toolbar.component.scss";
+
+.menuDiv{
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    height: calc((100vh - #{$header-height}));
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 175px;
+}
+
+dx-button{
+    width:250px;
+    height: 80px;
+    margin-top: 25px;
+    font-size: 18px;
+    font-family: 'MyFont';
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 450px){
+    dx-button{
+        width:350px;
+        height: 90px;
+        margin-top: 15px;
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-height: 760px){
+    .menuDiv{
+        padding-top: 100px;
+    }
+
+    dx-button{
+        height: 50px;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-height: 500px){
+    .menuDiv{
+        padding-top: 50px;
+    }
+}
+
+@media only screen and (max-height: 360px){
+    .menuDiv{
+        padding-top: 25px;
+    }
+}

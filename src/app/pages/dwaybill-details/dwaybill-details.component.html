@@ -1,0 +1,105 @@
+<div class="container">
+    <div class="headerDiv">
+      <span>ზედნადები #{{Data[0].Waybillnum || null}}</span>
+      <span>შეკვეთა #{{Data[0].OrderId || null}}</span>
+    </div>
+  
+    <div id="mainDiv">
+      <div class="tabDiv" *ngFor="let product of Data">
+        <div class="clientAdressDiv">
+          <p>{{product.Bcode}}</p>
+        </div>
+        <div>
+          <p>{{product.Products_nu}}</p>
+        </div>
+        <div class="iconDiv">
+          <p>{{product.Scount}}</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="buttonDiv">
+      <dx-button type="success" stylingMode="contained" (onClick)="confirmBtnClick()">
+        დადასტურება
+      </dx-button>
+    </div>
+  </div>
+
+
+
+  <dx-popup
+  [width]="320"
+  [height]="480"
+  [showTitle]="true"
+  titleTemplate="<div style='display: flex; justify-content: flex-start; height: 3em; align-items: center;'>
+                    <img src='../../../assets/logo.png' style='height: 20px; margin-right: 12px;'/>
+                    <span style='font-family:'myFont'; font-size:14px; font-weight:'bold';'>შეკვეთის დადასტურება</span>
+                  </div>"
+  [dragEnabled]="false"
+  [hideOnOutsideClick]="true"
+  [showCloseButton]="false"
+  container=".dx-viewport"
+  [(visible)]="popupVisible"
+>
+
+  <div class="popupContentDiv">
+    <div class="popupHeaderDiv">
+      <span>ზედნადები #{{Data[0].Waybillnum || null}}</span>
+      <span>შეკვეთა #{{Data[0].OrderId || null}}</span>
+    </div>
+
+
+
+    <!-- ???
+     <dx-text-area 
+    mode="text"
+    class="textArea"
+    height="150"
+    label="კომენტარი"
+    labelMode="static">
+    </dx-text-area>
+
+    <div class="payDiv">
+      <label>
+        თანხის აღება:
+      </label>
+      <dx-text-box 
+      mode="number"
+      width="90px">
+  
+      </dx-text-box>
+    </div> 
+      ????? -->
+
+
+    <div class="questionDiv">
+      <p id="questionP">{{question}}</p>
+    </div>
+    
+
+    <div class="popupBtnDiv">
+      <dx-button
+      type="success"
+      stylingMode="contained"
+      [text]="btnText"
+      width="130"
+      height="50"
+      (onClick)="changeStatus()"
+      >
+      </dx-button>
+  
+      <dx-button
+      type="normal"
+      stylingMode="outlined"
+      text="დახურვა"
+      width="130"
+      height="50"
+      (onClick)="closePopup()"
+      >
+      </dx-button>
+    </div>
+  </div>
+
+</dx-popup>
+
+

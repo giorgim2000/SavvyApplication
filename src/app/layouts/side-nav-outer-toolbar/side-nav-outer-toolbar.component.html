@@ -1,0 +1,12 @@
+
+<app-header
+  class="layout-header"
+  [menuToggleEnabled]="true"
+  (menuToggle)="menuOpened = !menuOpened;"
+  id="myMenu"
+  [title]="title">
+</app-header>
+
+  <div class="content">
+    <ng-content></ng-content>
+  </div>

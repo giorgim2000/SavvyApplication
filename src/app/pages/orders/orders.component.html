@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="headerDiv">
+        <p id="orderTitle">{{this.pageType}} - {{this.Acc}}</p>
+    </div>
+    
+    <div class="mainDiv">
+        <div *ngIf="Data.length === 0" class="notFoundDiv">
+            მიმდინარეობს მონაცემების ჩატვირთვა...
+        </div>
+        <div *ngIf="Data.length > 0" cdkDropList (cdkDropListDropped)="onDrop($event)">                                                                    <!--  cdkDropList (cdkDropListDropped)="onDrop($event)" -->
+          <div [class]="tabClassName" (click)="orderClick(order)" *ngFor="let order of Data" cdkDrag [cdkDragStartDelay]="750" cdkDragBoundary=".mainDiv">            <!--cdkDrag-->
+              <div class="clientAdressDiv">
+                  <p id="nameP">{{order.PresalerNu}}</p>
+                  <p id="adressP">{{order.Waybillnum}}</p>
+                  <p class="pInfo">შენიშვნა: {{order.Note}}</p>
+                  <p class="pInfo">კომენტარი: {{order.Comment}} </p>
+              </div>
+              <div class="iconDiv">
+                <ng-container *ngIf="order.Ostatus === 'დადასტურებული'; then completed
+                   else (order.Ostatus === 'პროექტი' || !order.Ostatus) ? pending : rejected"></ng-container>
+
+                    <ng-template #completed>
+                        <img [src]="completedUrl" alt="Completed">
+                    </ng-template>
+
+                    <ng-template #pending>
+                        <img [src]="pendingUrl" alt="Pending">
+                    </ng-template>
+
+                    <ng-template #rejected>
+                        <img [src]="rejectedUrl" alt="Rejected">
+                    </ng-template>
+              </div>
+          </div>
+        </div>
+        <div *ngIf="dummyData.length === 0" class="notFoundDiv">
+            ვიზიტები ვერ მოიძებნა...
+        </div>
+    </div>
+</div>
+
+
+

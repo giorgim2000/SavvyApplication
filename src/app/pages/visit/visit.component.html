@@ -1,0 +1,22 @@
+<div class="visitHeaderDiv">
+    <header>{{visitData.Accnu}}</header>
+</div>
+
+<div class="mainDiv">
+    <div class="visitInfoDiv">
+        <dx-button type="default" stylingMode="contained" (click)="orders()">შეკვეთები - {{visitData.Ordsuccess}}/{{visitData.Ordn}}</dx-button>
+    </div>
+    <div class="visitInfoDiv">
+        <dx-button type="default" stylingMode="contained" (click)="returns()">დაბრუნებები - {{visitData.Retsuccess}}/{{visitData.Retn}}</dx-button>
+    </div>
+    <div class="visitInfoDiv">
+        <dx-button type="default" stylingMode="contained" (click)="collect()">თანხის აღება - {{visitData.Collectpay}}/{{visitData.Payedcash}}</dx-button>
+    </div>
+    <div class="visitInfoDiv">
+        <dx-button type="default" stylingMode="contained" (click)="collect()">კომენტარის გაკეთება</dx-button>
+    </div>
+    <div class="visitInfoDiv">
+        <dx-button type="default" stylingMode="contained" (click)="collect()">ვიზიტის დასრულება</dx-button>
+    </div>
+</div>
+

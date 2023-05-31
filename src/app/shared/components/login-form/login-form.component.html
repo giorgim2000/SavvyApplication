@@ -1,0 +1,48 @@
+<form class="login-form" (submit)="onSubmit($event)">
+  <dx-form [formData]="formData" [disabled]="loading">
+
+    <dxi-item dataField="username" editorType="dxTextBox"
+      [editorOptions]="{ stylingMode: 'filled', placeholder: 'Username', height: 62}">
+      <dxi-validation-rule type="required" message="შეიყვანეთ მომხმარებლის სახელი"></dxi-validation-rule>
+      <dxo-label [visible]="false"></dxo-label>
+    </dxi-item>
+
+    <dxi-item dataField="password" editorType="dxTextBox"
+      [editorOptions]="{ stylingMode: 'filled', placeholder: 'Password', mode: 'password', height: 62 }">
+      <dxi-validation-rule type="required" message="შეიყვანეთ პაროლი!"></dxi-validation-rule>
+      <dxo-label [visible]="false"></dxo-label>
+    </dxi-item>
+
+    <!-- <dxi-item dataField="rememberMe" editorType="dxCheckBox"
+      [editorOptions]="{ text: 'დამახსოვრება', elementAttr: { class: 'form-text' } }">
+      <dxo-label [visible]="false"></dxo-label>
+    </dxi-item> -->
+
+    <dxi-item itemType="button">
+      <dxo-button-options width="100%" type="default" height="62" text="Login" [useSubmitBehavior]="true" [template]="'signInTemplate'">
+      </dxo-button-options>
+    </dxi-item>
+    <dxi-item itemType="button">
+      <dxo-button-options width="100%" type="default" height="62" text="Register" [onClick]="onRegisterAccountClick" [template]="'signInTemplate'">
+      </dxo-button-options>
+    </dxi-item>
+
+    <dxi-item>
+      <div class="link">
+        <a routerLink="/reset-password">Forgot password?</a>
+      </div>
+    </dxi-item>
+
+    <ng-container *dxTemplate="let item of 'signInTemplate'">
+      <div>
+        <span class="dx-button-text">
+          <ng-container *ngIf="loading; else notLoading">
+            <dx-load-indicator width="24px" height="24px" [visible]="true"></dx-load-indicator>
+          </ng-container>
+          <ng-template #notLoading id="btnText">{{item.text}}</ng-template>
+        </span>
+      </div>
+    </ng-container>
+
+  </dx-form>
+</form>

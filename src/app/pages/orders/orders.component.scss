@@ -1,0 +1,179 @@
+@import "../../layouts/side-nav-outer-toolbar/side-nav-outer-toolbar.component.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: calc((100vh - #{$header-height}) - 10vh);
+    -webkit-touch-callout: none; /* Disable touch callout */
+    -webkit-user-select: none; /* Disable text selection */
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.mainDiv{
+    width: 100%;
+}
+
+.headerDiv{
+    margin: 12px;
+    //border-bottom: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#orderTitle{
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    font-family: "myFont";
+    -webkit-touch-callout: none; /* Disable touch callout */
+    -webkit-user-select: none; /* Disable text selection */
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.notFoundDiv{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.tabDiv{
+    display: flex;
+    background-color: #ffffff;
+    transition: background-color 0.2s ease-in-out;
+    border-top: rgb(156, 153, 153) 1px solid;
+    border-bottom: rgb(156, 153, 153) 1px solid;
+    cursor: pointer;
+    margin: 5px auto;
+    border-radius: 10px;
+    //height: 160px;
+    width: 95%;
+    //overflow: hidden;
+    padding: 5px;
+}
+
+.returnTabDiv{
+    display: flex;
+    background-color: #ffffff;
+    transition: background-color 0.2s ease-in-out;
+    border-top: rgb(156, 153, 153) 1px solid;
+    border-bottom: rgb(156, 153, 153) 1px solid;
+    cursor: pointer;
+    margin: 5px auto;
+    border-radius: 10px;
+    height: 100px;
+    width: 95%;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.tabDiv:hover{
+    background-color: #dfe0e4;
+    border-top: black 2px solid;
+    border-bottom: black 2px solid;
+}
+
+.iconDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 13%;
+    -webkit-touch-callout: none; /* Disable touch callout */
+    -webkit-user-select: none; /* Disable text selection */
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.clientAdressDiv{
+    width: 87%;
+    -webkit-touch-callout: none; /* Disable touch callout */
+    -webkit-user-select: none; /* Disable text selection */
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.iconDiv > *{
+    margin: 0px;
+    padding: 0px;
+}
+
+p{
+    margin: 4px;
+    color: black;
+    //overflow: hidden;
+}
+
+#nameP{
+    font-weight: bold;
+    font-size: 1.15rem;
+}
+
+#adressP{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.cdk-drag-preview {
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+                0 8px 10px 1px rgba(0, 0, 0, 0.14),
+                0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+  
+.cdk-drag-animating{
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+
+
+// .pInfo{
+//     max-height: 2em; /* Set maximum height to 2 lines */
+//   overflow: hidden; /* Hide overflow text */
+//   text-overflow: ellipsis; /* Add ellipsis if text is truncated */
+//   white-space: normal; /* Allow text to wrap within the element */
+// }
+
+#sortBtn{
+    height: 65px;
+    margin-top: 10px;
+    font-size: 22px;
+    font-family: 'MyFont';
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 430px) {
+    .tabDiv{
+        height: 220px;
+
+    }
+
+    #orderTitle{
+        font-size: 32px;
+    }
+
+    #nameP{
+        font-size: 1.5rem;
+    }
+
+    #adressP{
+        font-size: 1.3rem;
+    }
+
+    .pInfo{
+        font-size: 1.2rem;
+    }
+}
+

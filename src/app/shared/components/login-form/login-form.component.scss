@@ -1,0 +1,30 @@
+@import "../../../../themes/generated/variables.base.scss";
+
+.login-form {
+  font-size: 30px !important;
+  font-family: 'MyFont';
+  .link {
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  ::ng-deep .form-text {
+    margin: 10px 0;
+    color: rgba($base-text-color, alpha($base-text-color) * 0.7);
+  }
+
+  .dx-item.dx-box-item{
+    margin: 5px 0px;
+  }
+
+  .dx-button-text{
+    font-family: 'MyFont';
+    font-size: 18px;
+  }
+}
+
